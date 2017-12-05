@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+    <title>Tapahtumat</title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+</head>
+<body>
+<h1>Tapahtumat</h1>
+<table class = "table table-stripped">
+ <tr>
+    <th>Tapahtumapaikka</th>
+    <th>Esiintyjä</th>
+    <th>Vuosi</th>
+    <th>Esitysmuoto</th>
+    <th>Hinta</th>
+    <th></th>
+    <th></th>
+  </tr>
+<tr th:each ="book : ${books}">
+<td th:text ="${book.title}"></td>
+<td th:text ="${book.author}"></td>
+<td th:text ="${book.year}"></td>
+<td th:text ="${book.isbn}"></td>
+<td th:text ="${book.price}"></td>
+<td><div><a class="btn btn-danger" th:href="@{/delete/{id}(id=${book.id})}">Poista</a></div></td>
+<td><div><a class="btn btn-success" th:href="@{/add}">Lisää</a></div></td>
+</tr>
+</table>
+<br></br>
+<form th:action="@{/logout}" method="post">
+<input type="submit" value="Sign Out"/>
+</form>
+<h1 th:inline="text">Hei [[${#httpServletRequest.remoteUser}]]!</h1>
+
+</body>
+</html>

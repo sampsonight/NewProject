@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+
+<head>
+    <title>Billy's BookStore</title>
+    <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    
+</head>
+<body>
+<h1>Lisää tapahtuma</h1>
+<div>
+<form th:object="${book}" th:action="@{save}" action="#" method="post">
+<label for="title">Tapahtumapaikka</label>
+<input type="text" th:field="*{title}" />
+<label for="author">Esiintyjä</label>
+<input type="text" th:field="*{author}" />
+<label for="year">Vuosi</label>
+<input type="text" th:field="*{year}" />
+<label for="isbn">Esiintymismuoto</label>
+<input type="text" th:field="*{isbn}" />
+<label for="price">Hinta</label>
+<input type="text" th:field="*{price}" />
+<input type="submit" value="Save"></input>
+</form>
+</div>
+</body>
+</html>

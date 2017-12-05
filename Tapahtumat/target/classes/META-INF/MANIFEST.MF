@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Implementation-Title: tehtava2-3
+Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: Juhani
+Implementation-Vendor-Id: tehatava
+Build-Jdk: 1.8.0_121
+Implementation-URL: http://projects.spring.io/spring-boot/tehtava2-3/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
